@@ -1,0 +1,358 @@
+[
+    {
+      "id": "36",
+      "nome": "Ginecologista"
+    },
+    {
+      "id": "71",
+      "nome": "Pediatra"
+    },
+    {
+      "id": "22",
+      "nome": "Médico clínico geral"
+    },
+    {
+      "id": "24",
+      "nome": "Dermatologista"
+    },
+    {
+      "id": "78",
+      "nome": "Psiquiatra"
+    },
+    {
+      "id": "67",
+      "nome": "Ortopedista - Traumatologista"
+    },
+    {
+      "id": "76",
+      "nome": "Psicólogo"
+    },
+    {
+      "id": "8",
+      "nome": "Cardiologista"
+    },
+    {
+      "id": "87",
+      "nome": "Urologista"
+    },
+    {
+      "id": "65",
+      "nome": "Oftalmologista"
+    },
+    {
+      "id": "64",
+      "nome": "Dentista"
+    },
+    {
+      "id": "26",
+      "nome": "Endocrinologista"
+    },
+    {
+      "id": "69",
+      "nome": "Otorrino"
+    },
+    {
+      "id": "15",
+      "nome": "Cirurgião geral"
+    },
+    {
+      "id": "60",
+      "nome": "Neurologista"
+    },
+    {
+      "id": "18",
+      "nome": "Cirurgião plástico"
+    },
+    {
+      "id": "72",
+      "nome": "Pneumologista"
+    },
+    {
+      "id": "33",
+      "nome": "Generalista"
+    },
+    {
+      "id": "58",
+      "nome": "Neurocirurgião"
+    },
+    {
+      "id": "39",
+      "nome": "Infectologista"
+    },
+    {
+      "id": "32",
+      "nome": "Gastroenterologista"
+    },
+    {
+      "id": "3",
+      "nome": "Alergista"
+    },
+    {
+      "id": "13",
+      "nome": "Cirurgião do aparelho digestivo"
+    },
+    {
+      "id": "6",
+      "nome": "Angiologista"
+    },
+    {
+      "id": "82",
+      "nome": "Reumatologista"
+    },
+    {
+      "id": "62",
+      "nome": "Nutricionista"
+    },
+    {
+      "id": "7",
+      "nome": "Oncologista"
+    },
+    {
+      "id": "23",
+      "nome": "Coloproctologista"
+    },
+    {
+      "id": "37",
+      "nome": "Hematologista"
+    },
+    {
+      "id": "56",
+      "nome": "Nefrologista"
+    },
+    {
+      "id": "75",
+      "nome": "Psicanalista"
+    },
+    {
+      "id": "41",
+      "nome": "Mastologista"
+    },
+    {
+      "id": "35",
+      "nome": "Geriatra"
+    },
+    {
+      "id": "20",
+      "nome": "Cirurgião vascular"
+    },
+    {
+      "id": "12",
+      "nome": "Cirurgião de cabeça e pescoço"
+    },
+    {
+      "id": "80",
+      "nome": "Radiologista"
+    },
+    {
+      "id": "38",
+      "nome": "Homeopata"
+    },
+    {
+      "id": "14",
+      "nome": "Cirurgião buco-maxilo-facial"
+    },
+    {
+      "id": "5",
+      "nome": "Anestesiologista"
+    },
+    {
+      "id": "28",
+      "nome": "Endoscopista"
+    },
+    {
+      "id": "30",
+      "nome": "Fisioterapeuta"
+    },
+    {
+      "id": "63",
+      "nome": "Nutrólogo"
+    },
+    {
+      "id": "1",
+      "nome": "Médico Acupunturista"
+    },
+    {
+      "id": "31",
+      "nome": "Fonoaudiólogo"
+    },
+    {
+      "id": "46",
+      "nome": "Médico do trabalho"
+    },
+    {
+      "id": "17",
+      "nome": "Cirurgião pediátrico"
+    },
+    {
+      "id": "9",
+      "nome": "Cirurgião cardiovascular"
+    },
+    {
+      "id": "42",
+      "nome": "Médico de família"
+    },
+    {
+      "id": "11",
+      "nome": "Cirurgião da mão"
+    },
+    {
+      "id": "19",
+      "nome": "Cirurgião torácico"
+    },
+    {
+      "id": "47",
+      "nome": "Médico do esporte"
+    },
+    {
+      "id": "51",
+      "nome": "Intensivista"
+    },
+    {
+      "id": "61",
+      "nome": "Neurologista pediátrico"
+    },
+    {
+      "id": "16",
+      "nome": "Cirurgião oncológico"
+    },
+    {
+      "id": "27",
+      "nome": "Endocrinologista pediátrico"
+    },
+    {
+      "id": "45",
+      "nome": "Medico do Sono"
+    },
+    {
+      "id": "86",
+      "nome": "Terapeuta complementar"
+    },
+    {
+      "id": "21",
+      "nome": "Especialista em Dor"
+    },
+    {
+      "id": "49",
+      "nome": "Especialista em Medicina Física e Reabilitação"
+    },
+    {
+      "id": "34",
+      "nome": "Geneticista"
+    },
+    {
+      "id": "48",
+      "nome": "Especialista em Medicina Estética"
+    },
+    {
+      "id": "79",
+      "nome": "Quiropraxista"
+    },
+    {
+      "id": "59",
+      "nome": "Neurofisiologista"
+    },
+    {
+      "id": "73",
+      "nome": "Pneumologista pediátrico"
+    },
+    {
+      "id": "70",
+      "nome": "Anátomopatologista"
+    },
+    {
+      "id": "84",
+      "nome": "Sexólogo"
+    },
+    {
+      "id": "10",
+      "nome": "Cirurgião cranio-maxilo-facial"
+    },
+    {
+      "id": "77",
+      "nome": "Psicopedagogo"
+    },
+    {
+      "id": "88",
+      "nome": "Cardiologista pediátrico"
+    },
+    {
+      "id": "52",
+      "nome": "Internista"
+    },
+    {
+      "id": "43",
+      "nome": "Médico de tráfego"
+    },
+    {
+      "id": "4",
+      "nome": "Patologista clínico"
+    },
+    {
+      "id": "53",
+      "nome": "Médico perito"
+    },
+    {
+      "id": "25",
+      "nome": "Especialista em Diagnóstico por imagem"
+    },
+    {
+      "id": "74",
+      "nome": "Podologista"
+    },
+    {
+      "id": "81",
+      "nome": "Radioterapeuta"
+    },
+    {
+      "id": "85",
+      "nome": "Terapeuta ocupacional"
+    },
+    {
+      "id": "68",
+      "nome": "Osteopata"
+    },
+    {
+      "id": "57",
+      "nome": "Nefrologista pediátrico"
+    },
+    {
+      "id": "54",
+      "nome": "Especialista em Medicina Nuclear"
+    },
+    {
+      "id": "29",
+      "nome": "Enfermeiro"
+    },
+    {
+      "id": "2",
+      "nome": "Especialista em Administração em Saúde"
+    },
+    {
+      "id": "55",
+      "nome": "Especialista em Medicina Preventiva"
+    },
+    {
+      "id": "40",
+      "nome": "Infectologista pediatra"
+    },
+    {
+      "id": "83",
+      "nome": "Reumatologista pediátrico"
+    },
+    {
+      "id": "44",
+      "nome": "Médico de urgência"
+    },
+    {
+      "id": "66",
+      "nome": "Optometrista"
+    },
+    {
+      "id": "50",
+      "nome": "Médico hiperbarista"
+    },
+    {
+      "id": "89",
+      "nome": "Hepatologista"
+    }
+  ]

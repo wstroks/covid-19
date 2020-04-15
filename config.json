@@ -1,0 +1,11 @@
+{
+    "prefix":"!",
+    "token": "Njk5Njc3OTY0MjE1OTEwNTMx.XpX38Q.u-QOww04LgzDlmHgwRZh7tACt5U",
+    "avisosChannelId": "697881576494596197",
+    "boasVindasChannelId": "697834592719208452",
+
+    "permissions": {
+        "!clear": "ADMINISTRATOR",
+        "!aviso": "ADMINISTRATOR"
+    }
+}
