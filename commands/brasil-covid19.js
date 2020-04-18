@@ -36,14 +36,18 @@ const main = async (msg, args) => {
     const totalMortesHoje = $('#main_table_countries_today > tbody.total_row_body > tr > td:nth-child(5)').text();
     const totalcasosRecuperados = $('#main_table_countries_today > tbody.total_row_body > tr > td:nth-child(6)').text();
     const totalAtivos = $('#main_table_countries_today > tbody.total_row_body > tr > td:nth-child(7)').text();
-    const t=$('#main_table_countries_today > tbody:nth-child(2) > tr:nth-child(21)').text();
+    const t=$('#main_table_countries_today > tbody:nth-child(2) > tr:nth-child(19)').text();
     var arrayDados=t.split("\n");
     console.log(arrayDados);
 
     // console.log(text1 +"\n \n"+text2+'\n\n'+text3+'\n\n'+text4+ "\n \n Leia a matéria completa no link: " + url);
   // console.log(text1 + "\nxxx"+text2);
-
-  
+  var contador=0;
+  for(var i=0; i<arrayDados.length; i++){
+    if(arrayDados[i]=="Brazil"){
+        contador=i;
+    }
+  }
    // msg.author.send(text1);
    /* 
     got(url).then(response => {
@@ -60,7 +64,7 @@ const main = async (msg, args) => {
     // inside a command, event listener, etc.
     var exampleEmbed = new Discord.MessageEmbed()
         .setColor('#0099ff')
-        .setTitle(`Dados Brasil do Covid-19`)
+        .setTitle(`Dados ${arrayDados[1]} do Covid-19`)
         .setURL("https://www.worldometers.info/coronavirus/")
         .setDescription('')
         .setThumbnail('https://www.gstatic.com/onebox/sports/logos/flags/brazil_icon_square.png')

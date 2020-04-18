@@ -57,7 +57,7 @@ const main = async (msg, args) => {
 
 
 
-    const url = `https://brasil.io/api/dataset/covid19/caso/data?format=json`;
+    const url = `https://brasil.io/api/dataset/covid19/obito_cartorio/data?format=json`;
     // console.log(url);
     const content = await fetchData(url);
 
@@ -70,42 +70,35 @@ const main = async (msg, args) => {
     //  console.log(JSON.stringify(content.results));
 
     // }
-    var mortesCovid=0;
-    var casosConfirmados=0;
-    var populacao=0;
+
     var jsonData = content;
-    var estado="";
-    
-   
-    //counter.is_last==true
     for (var i = 0; i < jsonData.results.length; i++) {
         var counter = jsonData.results[i];
-        if (counter.state==args[1].toUpperCase() && counter.is_last==true) {
-           //console.log("data "+counter.date +"\n eaths_pneumonia_2019: "+counter.deaths_pneumonia_2019 + " vs deaths_pneumonia_2020: "+counter.deaths_pneumonia_2020+"\n deaths_respiratory_failure_2019: "+counter.deaths_respiratory_failure_2019 + " vs deaths_respiratory_failure_2020: "+counter.deaths_respiratory_failure_2020+"\n deaths_covid19: "+counter.deaths_covid19 +"\n estado: "+counter.state+"\n\n");
+        var data = new Date();
+        var dia = data.getDate();
+        var mes     = data.getMonth();  
+        var ano4    = data.getFullYear();
+        var str_data = ano4 + '-0' + (mes+1) + '-' +dia ;
+        console.log(str_data);
+        if (counter.date ==str_data && counter.state==args[1].toUpperCase()) {
+          // console.log("data "+counter.date +"\n eaths_pneumonia_2019: "+counter.deaths_pneumonia_2019 + " vs deaths_pneumonia_2020: "+counter.deaths_pneumonia_2020+"\n deaths_respiratory_failure_2019: "+counter.deaths_respiratory_failure_2019 + " vs deaths_respiratory_failure_2020: "+counter.deaths_respiratory_failure_2020+"\n deaths_covid19: "+counter.deaths_covid19 +"\n estado: "+counter.state+"\n\n");
           
-           mortesCovid+=parseInt(counter.deaths);
-           casosConfirmados+=parseInt(counter.confirmed);
-           estado=counter.state;
-          
-        }//console.log("data "+counter.);
-    }
-   
-
-
-    const Discord = require('discord.js');
+           const Discord = require('discord.js');
            
            // inside a command, event listener, etc.
            var exampleEmbed = new Discord.MessageEmbed()
                .setColor('#0099ff')
-               .setTitle(`Dados por Estado ${estado}`)
-               .setURL("https://brasil.io/dataset/covid19/")
-               .setDescription('')
+               .setTitle(`Dados de Óbitos`)
+               .setURL("https://brasil.io/dataset/covid19/obito_cartorio/?search=&date=&state=BA&epidemiological_week_2019=&epidemiological_week_2020=")
+               .setDescription('Essa tabela contém dados de óbitos por suspeita/confirmação de covid19, pneumonia ou insuficiência respiratória registrados nos cartórios e disponíveis no Portal da Transparência do Registro Civil. ')
                .setThumbnail('https://www.gstatic.com/onebox/sports/logos/flags/brazil_icon_square.png')
                .addFields(
-                  // { name: 'Comentário de Paciente', value: text5 },
-                   { name: 'Total de Casos', value:  (casosConfirmados/2), inline: true },
-                   { name: 'Total de Mortes', value: (mortesCovid/2), inline: true },
-                   
+                  { name: 'Tabela 1', value: "Óbitos Acumumulados Pneumonia" },
+                   { name: '2019', value:  counter.deaths_pneumonia_2019, inline: true },
+                   { name: '2020', value: counter.deaths_pneumonia_2020, inline: true },
+                   { name: 'Tabela 2', value: "Óbitos Insuficiência Respiratória" },
+                   { name: '2019', value:  counter.deaths_respiratory_failure_2019 , inline: true },
+                   { name: '2020', value: counter.deaths_respiratory_failure_2020 , inline: true },
                   
                    
                   
@@ -117,6 +110,8 @@ const main = async (msg, args) => {
        
        
            msg.author.send(exampleEmbed);
+        }//console.log("data "+counter.);
+    }
     /*"deaths_covid19": 2,
     "deaths_pneumonia_2019": 256,
     "deaths_pneumonia_2020": 230,
@@ -210,5 +205,12 @@ const main = async (msg, args) => {
 
 }
 
-
+function FormataStringData(data) {
+    var dia  = data.split("/")[0];
+    var mes  = data.split("/")[1];
+    var ano  = data.split("/")[2];
+  
+    return ano + '-' + ("0"+mes).slice(-2) + '-' + ("0"+dia).slice(-2);
+    // Utilizo o .slice(-2) para garantir o formato com 2 digitos.
+  }
   
