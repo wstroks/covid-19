@@ -53,6 +53,7 @@ const main = async (msg, args) => {
     const url = `https://brasil.io/dataset/covid19/caso?search=${cidadeUrl}&date=&state=${altoEstado}&city=&place_type=&is_last=True&city_ibge_code=&order_for_place=`;
     console.log(url);
     const content = await fetchData(url);
+    
     const $ = cheerio.load(content)
 
 /*
@@ -65,7 +66,8 @@ const main = async (msg, args) => {
     const totalAtivos = $('#main_table_countries_today > tbody.total_row_body > tr > td:nth-child(7)').text();
   
     */
-   
+   const nomeCidade2=$('#covid19 > tbody > tr > td:nth-child(3)').html();
+   console.log(nomeCidade2 + " html");
     const nomeCidade=$('#covid19 > tbody > tr > td:nth-child(3)').text();
     const totalCasos=$('#covid19 > tbody > tr > td:nth-child(5)').text();
     var totalMortes= $('#covid19 > tbody > tr > td:nth-child(6)').text();

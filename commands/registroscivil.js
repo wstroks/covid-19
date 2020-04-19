@@ -65,52 +65,93 @@ const main = async (msg, args) => {
     const content1 = await fetchData1(url1);
     const $ = cheerio.load(content1)
     const totalGlobo = $('body > app-root > ion-app > ion-router-outlet > app-home > ion-content > painel-insumos-component > div > card-totalizadores-component > div.container-cards.ct-totalizadores.ct-insumos > div:nth-child(4) > div > div.lb-total').text();
-    console.log(totalGlobo+"asdasdas");
+    console.log(totalGlobo + "asdasdas");
     //if (content.results[i].date == "2020-04-18") {
     //  console.log(JSON.stringify(content.results));
 
     // }
 
     var jsonData = content;
+    var data = new Date();
+    var dia = data.getDate();
+    var mes = data.getMonth();
+    var ano4 = data.getFullYear();
+    var str_data = ano4 + '-0' + (mes + 1) + '-' + dia;
+    var str_data = ano4 + '-0' + (mes + 1) + '-' + (dia-1);
+    var vefirica =0;
+    var vefirica1 =0;
     for (var i = 0; i < jsonData.results.length; i++) {
         var counter = jsonData.results[i];
-        var data = new Date();
-        var dia = data.getDate();
-        var mes     = data.getMonth();  
-        var ano4    = data.getFullYear();
-        var str_data = ano4 + '-0' + (mes+1) + '-' +dia ;
-        console.log(str_data);
-        if (counter.date ==str_data && counter.state==args[1].toUpperCase()) {
-          // console.log("data "+counter.date +"\n eaths_pneumonia_2019: "+counter.deaths_pneumonia_2019 + " vs deaths_pneumonia_2020: "+counter.deaths_pneumonia_2020+"\n deaths_respiratory_failure_2019: "+counter.deaths_respiratory_failure_2019 + " vs deaths_respiratory_failure_2020: "+counter.deaths_respiratory_failure_2020+"\n deaths_covid19: "+counter.deaths_covid19 +"\n estado: "+counter.state+"\n\n");
-          
-           const Discord = require('discord.js');
-           
-           // inside a command, event listener, etc.
-           var exampleEmbed = new Discord.MessageEmbed()
-               .setColor('#0099ff')
-               .setTitle(`Dados de Óbitos`)
-               .setURL("https://brasil.io/dataset/covid19/obito_cartorio/?search=&date=&state=BA&epidemiological_week_2019=&epidemiological_week_2020=")
-               .setDescription('Essa tabela contém dados de óbitos por suspeita/confirmação de covid19, pneumonia ou insuficiência respiratória registrados nos cartórios e disponíveis no Portal da Transparência do Registro Civil. ')
-               .setThumbnail('https://www.gstatic.com/onebox/sports/logos/flags/brazil_icon_square.png')
-               .addFields(
-                  { name: 'Tabela 1', value: "Óbitos Acumumulados Pneumonia" },
-                   { name: '2019', value:  counter.deaths_pneumonia_2019, inline: true },
-                   { name: '2020', value: counter.deaths_pneumonia_2020, inline: true },
-                   { name: 'Tabela 2', value: "Óbitos Insuficiência Respiratória" },
-                   { name: '2019', value:  counter.deaths_respiratory_failure_2019 , inline: true },
-                   { name: '2020', value: counter.deaths_respiratory_failure_2020 , inline: true },
-                  
-                   
-                  
-       
-                  
-               )
-               .setTimestamp()
-               .setFooter('Clique no titulo e veja mais informações sobre', '');
-       
-       
-           msg.author.send(exampleEmbed);
+
+        //console.log(str_data);
+        if (counter.date == str_data && counter.state == args[1].toUpperCase()) {
+            // console.log("data "+counter.date +"\n eaths_pneumonia_2019: "+counter.deaths_pneumonia_2019 + " vs deaths_pneumonia_2020: "+counter.deaths_pneumonia_2020+"\n deaths_respiratory_failure_2019: "+counter.deaths_respiratory_failure_2019 + " vs deaths_respiratory_failure_2020: "+counter.deaths_respiratory_failure_2020+"\n deaths_covid19: "+counter.deaths_covid19 +"\n estado: "+counter.state+"\n\n");
+
+            const Discord = require('discord.js');
+            vefirica++;
+            vefirica1++;
+            // inside a command, event listener, etc.
+            var exampleEmbed = new Discord.MessageEmbed()
+                .setColor('#0099ff')
+                .setTitle(`Dados de Óbitos`)
+                .setURL("https://brasil.io/dataset/covid19/obito_cartorio/?search=&date=&state=BA&epidemiological_week_2019=&epidemiological_week_2020=")
+                .setDescription('Essa tabela contém dados de óbitos por suspeita/confirmação de covid19, pneumonia ou insuficiência respiratória registrados nos cartórios e disponíveis no Portal da Transparência do Registro Civil. ')
+                .setThumbnail('https://www.gstatic.com/onebox/sports/logos/flags/brazil_icon_square.png')
+                .addFields(
+                    { name: 'Tabela 1', value: "Óbitos Acumumulados Pneumonia" },
+                    { name: '2019', value: counter.deaths_pneumonia_2019, inline: true },
+                    { name: '2020', value: counter.deaths_pneumonia_2020, inline: true },
+                    { name: 'Tabela 2', value: "Óbitos Insuficiência Respiratória" },
+                    { name: '2019', value: counter.deaths_respiratory_failure_2019, inline: true },
+                    { name: '2020', value: counter.deaths_respiratory_failure_2020, inline: true },
+
+
+
+
+
+                )
+                .setTimestamp()
+                .setFooter('Clique no titulo e veja mais informações sobre', '');
+
+
+            msg.author.send(exampleEmbed);
         }//console.log("data "+counter.);
+
+        if (counter.date == str_data1 && counter.state == args[1].toUpperCase() && vefirica==0) {
+            // console.log("data "+counter.date +"\n eaths_pneumonia_2019: "+counter.deaths_pneumonia_2019 + " vs deaths_pneumonia_2020: "+counter.deaths_pneumonia_2020+"\n deaths_respiratory_failure_2019: "+counter.deaths_respiratory_failure_2019 + " vs deaths_respiratory_failure_2020: "+counter.deaths_respiratory_failure_2020+"\n deaths_covid19: "+counter.deaths_covid19 +"\n estado: "+counter.state+"\n\n");
+
+            const Discord = require('discord.js');
+            vefirica1++;
+            // inside a command, event listener, etc.
+            var exampleEmbed = new Discord.MessageEmbed()
+                .setColor('#0099ff')
+                .setTitle(`Dados de Óbitos`)
+                .setURL("https://brasil.io/dataset/covid19/obito_cartorio/?search=&date=&state=BA&epidemiological_week_2019=&epidemiological_week_2020=")
+                .setDescription('Essa tabela contém dados de óbitos por suspeita/confirmação de covid19, pneumonia ou insuficiência respiratória registrados nos cartórios e disponíveis no Portal da Transparência do Registro Civil. ')
+                .setThumbnail('https://www.gstatic.com/onebox/sports/logos/flags/brazil_icon_square.png')
+                .addFields(
+                    { name: 'Tabela 1', value: "Óbitos Acumumulados Pneumonia" },
+                    { name: '2019', value: counter.deaths_pneumonia_2019, inline: true },
+                    { name: '2020', value: counter.deaths_pneumonia_2020, inline: true },
+                    { name: 'Tabela 2', value: "Óbitos Insuficiência Respiratória" },
+                    { name: '2019', value: counter.deaths_respiratory_failure_2019, inline: true },
+                    { name: '2020', value: counter.deaths_respiratory_failure_2020, inline: true },
+
+
+
+
+
+                )
+                .setTimestamp()
+                .setFooter('Clique no titulo e veja mais informações sobre', '');
+
+
+            msg.author.send(exampleEmbed);
+        }
+    }
+
+    if(vefirica1==0){
+        msg.channel.send("A sua busca falhou, verifique se digitou a sigla do estado da maneira correta!\n```!registrocivil <sigla do estado>``````Exemplo: !registrocivil rj```")
     }
     /*"deaths_covid19": 2,
     "deaths_pneumonia_2019": 256,
@@ -199,18 +240,10 @@ const main = async (msg, args) => {
   
       msg.author.send(exampleEmbed);}*/
 
-     
+
 
 
 
 }
 
-function FormataStringData(data) {
-    var dia  = data.split("/")[0];
-    var mes  = data.split("/")[1];
-    var ano  = data.split("/")[2];
-  
-    return ano + '-' + ("0"+mes).slice(-2) + '-' + ("0"+dia).slice(-2);
-    // Utilizo o .slice(-2) para garantir o formato com 2 digitos.
-  }
-  
+
