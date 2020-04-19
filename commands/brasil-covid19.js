@@ -52,7 +52,7 @@ const main = async (msg, args) => {
 
     }
    // arrayDados=t.split("\n");
-    console.log(arrayDados);
+   // console.log(arrayDados);
 
     // console.log(text1 +"\n \n"+text2+'\n\n'+text3+'\n\n'+text4+ "\n \n Leia a matéria completa no link: " + url);
   // console.log(text1 + "\nxxx"+text2);
