@@ -31,7 +31,7 @@ const main = async (msg, args) => {
 
 
     // console.log(text1 +"\n \n"+text2+'\n\n'+text3+'\n\n'+text4+ "\n \n Leia a matéria completa no link: " + url);
-    console.log(text1+"\n"+text2+"\n"+text3);
+   // console.log(text1+"\n"+text2+"\n"+text3);
     msg.author.send("História do Covid-19\n\n"+text1+"\n"+text2+"\n"+text3)
     /*const Discord = require('discord.js');
 

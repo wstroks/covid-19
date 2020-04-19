@@ -30,7 +30,7 @@ module.exports = async (client, msg, args, database) => {
         }
 
     }
-    console.log("a "+avaliacao+" "+comentario);
+    //console.log("a "+avaliacao+" "+comentario);
 
     // inHTML("ex-table1","");    
 

@@ -21,7 +21,7 @@ const fetchData = async (url) => {
 }
 
 const main = async (msg, args) => {
-    console.log("a " + args);
+    //console.log("a " + args);
     /*
     var estado="";
     var novoArray="";
@@ -52,7 +52,7 @@ const main = async (msg, args) => {
     var est=args[1].toUpperCase();
 
     const url = `https://brasil.io/dataset/covid19/caso/?search=&date=&state=${est}&city=&place_type=state&is_last=True&city_ibge_code=&order_for_place=`;
-    console.log(url);
+    //console.log(url);
     const content = await fetchData(url);
     
     const $ = cheerio.load(content)
@@ -68,12 +68,12 @@ const main = async (msg, args) => {
   
     */
    const nomeCidade2=$('#covid19 > tbody > tr > td:nth-child(2)').html();
-   console.log(nomeCidade2 + " html");
+   //console.log(nomeCidade2 + " html");
     const nomeCidade=$('#covid19 > tbody > tr > td:nth-child(3)').text();
     const totalCasos=$('#covid19 > tbody > tr > td:nth-child(5)').text();
     var totalMortes= $('#covid19 > tbody > tr > td:nth-child(6)').text();
    
-    console.log(totalMortes+ " 1");
+   // console.log(totalMortes+ " 1");
     /*s = t.replace(/[\n]+/g, '');
     var arrayDados=t.split(" ");
     const filtrado = arrayDados.filter(x => x.trim().length > 0);

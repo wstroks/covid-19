@@ -65,7 +65,7 @@ const main = async (msg, args) => {
     const content1 = await fetchData1(url1);
     const $ = cheerio.load(content1)
     const totalGlobo = $('body > app-root > ion-app > ion-router-outlet > app-home > ion-content > painel-insumos-component > div > card-totalizadores-component > div.container-cards.ct-totalizadores.ct-insumos > div:nth-child(4) > div > div.lb-total').text();
-    console.log(totalGlobo + "asdasdas");
+    //console.log(totalGlobo + "asdasdas");
     //if (content.results[i].date == "2020-04-18") {
     //  console.log(JSON.stringify(content.results));
 
