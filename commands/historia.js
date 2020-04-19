@@ -32,7 +32,22 @@ const main = async (msg, args) => {
 
     // console.log(text1 +"\n \n"+text2+'\n\n'+text3+'\n\n'+text4+ "\n \n Leia a matéria completa no link: " + url);
    // console.log(text1+"\n"+text2+"\n"+text3);
-    msg.author.send("História do Covid-19\n\n"+text1+"\n"+text2+"\n"+text3)
+    //msg.author.send("História do Covid-19\n\n"+text1+"\n"+text2+"\n"+text3)
+
+    const Discord = require('discord.js');
+
+    // inside a command, event listener, etc.
+    var exampleEmbed = new Discord.MessageEmbed()
+        .setColor('#0099ff')
+        .setTitle("História do Covid-19")
+        .setURL("https://www.paho.org/bra/index.php?option=com_content&view=article&id=6101:covid19&Itemid=875")
+        .setDescription("\n"+text1+"\n"+text2+"\n"+text3)
+        //.setThumbnail('https://www.gstatic.com/images/icons/material/system_gm/1x/language_googblue_24dp.png')
+        .setTimestamp()
+        .setFooter('Clique no titulo e veja mais informações sobre', '');
+
+
+    msg.author.send(exampleEmbed);
     /*const Discord = require('discord.js');
 
     // inside a command, event listener, etc.
