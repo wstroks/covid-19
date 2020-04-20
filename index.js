@@ -75,3 +75,5 @@ client.on("guildMemberRemove", (member) => {
 });
 
 client.login(config.token);
+
+require('http').createServer().listen(3000)
