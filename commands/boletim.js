@@ -114,7 +114,7 @@ const main = async (msg, args) => {
             .setColor('#0099ff')
             .setTitle(`Boletim informativo de ${estado}`)
             .setURL(link)
-            .setDescription('Clique no título do card e acesse o boletim informativo do seu estado.')
+            .setDescription('Fique por dentro das últimas notícias sobre o COVID-19 em seu estado. Clique no título para ler.')
             .setThumbnail('http://www.saude.ba.gov.br/wp-content/uploads/2020/03/Imagem-padrao-portal-novo-coronavirus-covid19.3-360x240.jpeg')
 
             .setTimestamp()

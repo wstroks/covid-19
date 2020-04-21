@@ -9,6 +9,7 @@ const descriptions = {
     "!brasil-covid19": "```Informações sobre casos do COVID-19 no Brasil;```",
     "!boletim": "```Boletim informativo do seu estado. Uso <!boletim sigla>. Exemplo: <!boletim ba>;```",
     "!cidade-covid19": "```Descubra quantos casos há em sua cidade. Uso: <!cidade-covid19 cidade-sigla do estado>. Exemplo: <!cidade-covid19 feira de santana-ba>;```",
+    "!clear":"```Limpar chat geral;```",
     "!diagnostico": "```Informações sobre o diagnóstico do COVID-19;```",
     "!estado-covid19": "```Descubra quantos casos há em sua cidade. Uso: <!estado-covid19 sigla do estado>. Exemplo: <!estado-covid19 ba>;```",
     "!fakenews": "```Número para verificar a veracidade de informações relacionadas ao COVID-19;```",
@@ -20,7 +21,8 @@ const descriptions = {
     "!rendabasica": "```Informações sobre como o projeto Renda Básica do COVID-19;```",
     "!transmissao": "```Informações sobre formas de transmissão do COVID-19;```",
     "!tratamento": "```Informações sobre o tratamento do COVID-19;```",
-    "!registroscivil": "```Portal da Transparência do Registro Civil. Uso <!registrocivil sigla>. Exemplo: <!registrocivil ba>;```",
+    
+    
 };
 
 

@@ -63,7 +63,7 @@ client.on("message", (msg) => {
         else if (args[0].split("")[0] == config.prefix) unknowCommand(client, msg);
     }
 });
-
+/** 
 client.on("guildMemberAdd", (member) => {
     const boasVindasChannel = member.guild.channels.cache.find(channel => channel.id == config.boasVindasChannelId);
     boasVindasChannel.send(`${member.user} acabou de entrar em nosso servidor :P yey`);
@@ -72,8 +72,8 @@ client.on("guildMemberAdd", (member) => {
 client.on("guildMemberRemove", (member) => {
     const boasVindasChannel = member.guild.channels.cache.find(channel => channel.id == config.boasVindasChannelId);
     boasVindasChannel.send(`${member.user} saiu do server :( awwww 😔`);
-});
+});*/
 
 client.login(config.token);
 
-require('http').createServer().listen(3000)
+//require('http').createServer().listen(3000)
