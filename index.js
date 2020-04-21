@@ -1,5 +1,8 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
+const express = require('express'),
+    app = express(),
+    port = process.env.PORT || 3000;
 
 const config = require("./config.json");
 const commands = require("./scripts/commandReader")(config.prefix);
@@ -77,3 +80,8 @@ client.on("guildMemberRemove", (member) => {
 client.login(config.token);
 
 //require('http').createServer().listen(3000)
+
+const server = app.listen(port, function () {
+    let port = server.address().port;
+    console.log('Online server at: '+port);
+});
