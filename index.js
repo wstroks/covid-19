@@ -81,7 +81,18 @@ client.login(config.token);
 
 //require('http').createServer().listen(3000)
 
+/**(function wakeup() {
+    require('open')('https://mywebsite.herokuapp.com', (err) => {
+      if (err) throw err;
+      console.log('Woke up!');
+      setTimeout(wakeup, 1740000); //29m
+    });
+  })();*/
+
+const wakeUpDyno = require("./scripts/wakeUpDyno.js");   
+const DYNO_URL = "https://covid19-botzada.herokuapp.com";
 const server = app.listen(port, function () {
     let port = server.address().port;
     console.log('Online server at: '+port);
+    wakeUpDyno(DYNO_URL);
 });
