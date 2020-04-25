@@ -75,7 +75,7 @@ const main = async (msg, args, id) => {
        // console.log(text4+" s");
         if(text2==null){
             contador2++;
-            if(contador2==1){
+            if(contador2>=3){
             msg.channel.send("A buscar falhou! Digite novamente o tipo de médico que deseja!!\n```!medico p <tipo de médico> l <cidade>-<sigla do estado>```\n```Exemplo:\n!medico p fonoaudiólogo l feira de santana-ba \n!medico p psicólogo l feira de santana-ba\n!medico p médico clínico geral l salvador-ba```\nVale ressaltar, que é de suma importância a escrita de sua cidade e o tipo de médico da maneira correta e com acentuação caso tenha. Lembrando que ao clicar no nome do profissional é possível saber mais informações a respeito.");}
         }else{
         var array4 = text4.split(" ");
