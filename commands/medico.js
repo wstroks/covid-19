@@ -147,7 +147,7 @@ const main = async (msg, args, id) => {
         msg.author.send(exampleEmbed);}
 
 
-    }
+    
 
     
 
