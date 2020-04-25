@@ -73,7 +73,7 @@ const main = async (msg, args, id) => {
         const text6 = $('#search-content > div > ul > li:nth-child(' + j + ') > div.panel.panel-default > div > div > div.col-md-6.result-column.padding-2.padding-left-3.padding-xs-left-3.padding-xs-left-3.padding-xs-right-3.padding-xs-right-3 > div.dp-doctor-card.dp-doctor-card-md > div.media > div.media-body > h4').text();
         // console.log(text1 +"\n \n"+text2+'\n\n'+text3+'\n\n'+text4+ "\n \n Leia a matéria completa no link: " + url);
        // console.log(text4+" s");
-        if(text4==null){
+        /*if(text4==null){
             contador2++;
             if(contador2==1){
             msg.channel.send("A buscar falhou! Digite novamente o tipo de médico que deseja!!\n```!medico p <tipo de médico> l <cidade>-<sigla do estado>```\n```Exemplo:\n!medico p fonoaudiólogo l feira de santana-ba \n!medico p psicólogo l feira de santana-ba\n!medico p médico clínico geral l salvador-ba```\nVale ressaltar, que é de suma importância a escrita de sua cidade e o tipo de médico da maneira correta e com acentuação caso tenha. Lembrando que ao clicar no nome do profissional é possível saber mais informações a respeito.");}
@@ -84,7 +84,7 @@ const main = async (msg, args, id) => {
         if(!text5){
             text5="Não tem comentários";
           //  console.log("entrou ");
-        }
+        }*/
         var regex4 = /(src=")(.*)(")/;
         //var x= array4[4].replace(/"/g, '');
         //console.log(array4[4]+" wwwww"+x+" ");
