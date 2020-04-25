@@ -63,22 +63,25 @@ const main = async (msg, args, id) => {
     var contador=0;
     var contador1=0;
     var contador2=0;
-    for (var j = 1; j < 4; j++) {
+    for (var j = 2; j < 5; j++) {
         const text1 = $('#search-content > div > ul > li:nth-child(' + j + ') > div.panel.panel-default > div > div > div.col-md-6.result-column.padding-2.padding-left-3.padding-xs-left-3.padding-xs-left-3.padding-xs-right-3.padding-xs-right-3 > div.dp-doctor-card.dp-doctor-card-md > div.media > div.media-body > h3').text();
 
         const text2 = $('#search-content > div > ul > li:nth-child(' + j + ') > div.panel.panel-default > div > div > div.col-md-6.result-column.padding-2.padding-left-3.padding-xs-left-3.padding-xs-left-3.padding-xs-right-3.padding-xs-right-3 > div.dp-doctor-card.dp-doctor-card-md > div.media > div.media-body > h3').html();
         const text3 = $('#search-content > div > ul > li:nth-child(' + j + ') > div.panel.panel-default > div > div > div.col-md-6.result-column.padding-2.padding-left-3.padding-xs-left-3.padding-xs-left-3.padding-xs-right-3.padding-xs-right-3 > div.dp-doctor-card.dp-doctor-card-md > div.media > div.media-body > a > span').text();
-        const text4 = $('#search-content > div > ul > li:nth-child(' + j + ') > div.panel.panel-default > div > div > div.col-md-6.result-column.padding-2.padding-left-3.padding-xs-left-3.padding-xs-left-3.padding-xs-right-3.padding-xs-right-3 > div.dp-doctor-card.dp-doctor-card-md > div.media > div.media-left.offset-right-1 > a > span').html();
+        const text4 = $('#search-content > div > ul > li:nth-child('+j+') > div.panel.panel-default > div > div > div.col-md-6.result-column.padding-2.padding-left-3.padding-xs-left-3.padding-xs-left-3.padding-xs-right-3.padding-xs-right-3 > div.dp-doctor-card.dp-doctor-card-md > div.media > div.media-left.offset-right-0-5.offset-xs-right-0 > a > span').html();
         var text5 = $('#search-content > div > ul > li:nth-child(' + j + ') > div.panel.panel-default > div > div > div.col-md-6.result-column.padding-2.padding-left-3.padding-xs-left-3.padding-xs-left-3.padding-xs-right-3.padding-xs-right-3 > div.dp-doctor-card.dp-doctor-card-md > div.offset-top-1 > div > em.hidden-xs').text();
-        const text6 = $('#search-content > div > ul > li:nth-child(' + j + ') > div.panel.panel-default > div > div > div.col-md-6.result-column.padding-2.padding-left-3.padding-xs-left-3.padding-xs-left-3.padding-xs-right-3.padding-xs-right-3 > div.dp-doctor-card.dp-doctor-card-md > div.media > div.media-body > h4').text();
+        const text6 = $('#search-content > div > ul > li:nth-child('+j+') > div.panel.panel-default > div > div > div.col-md-6.result-column.padding-2.padding-left-3.padding-xs-left-3.padding-xs-left-3.padding-xs-right-3.padding-xs-right-3 > div.dp-doctor-card.dp-doctor-card-md > div > div.media-body > h4 > span.hide').text();
         // console.log(text1 +"\n \n"+text2+'\n\n'+text3+'\n\n'+text4+ "\n \n Leia a matéria completa no link: " + url);
        // console.log(text4+" s");
-        if(text2==null){
+        if(text4==null){
             contador2++;
+            console.log("aqui a"+ contador2);
             if(contador2>=3){
             msg.channel.send("A buscar falhou! Digite novamente o tipo de médico que deseja!!\n```!medico p <tipo de médico> l <cidade>-<sigla do estado>```\n```Exemplo:\n!medico p fonoaudiólogo l feira de santana-ba \n!medico p psicólogo l feira de santana-ba\n!medico p médico clínico geral l salvador-ba```\nVale ressaltar, que é de suma importância a escrita de sua cidade e o tipo de médico da maneira correta e com acentuação caso tenha. Lembrando que ao clicar no nome do profissional é possível saber mais informações a respeito.");}
         }else{
+            console.log(text4+"a "+text5);
         var array4 = text4.split(" ");
+        
         //var array5 = text5.split(" ");
        // console.log("sozinho"+ text5);
         if(!text5){
@@ -123,11 +126,11 @@ const main = async (msg, args, id) => {
 
             }
 
-        }
+        } console.log(text6+"exemplo");
        // console.log("112 "+regex.exec(splitArray[contador1])[2]+" text"+text5+" "+array2[13]);
         
         const Discord = require('discord.js');
-
+       
         // inside a command, event listener, etc.
         var exampleEmbed = new Discord.MessageEmbed()
             .setColor('#0099ff')
