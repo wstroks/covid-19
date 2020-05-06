@@ -1,10 +1,8 @@
 
 
-const request = require('request-promise');
 const cheerio = require('cheerio');
 const axios = require('axios');
-const fs = require("fs");
-const got = require('got');
+
 
 
 
@@ -21,32 +19,7 @@ const fetchData = async (url) => {
 }
 
 const main = async (msg, args) => {
-    //console.log("a " + args);
-    /*
-    var estado="";
-    var novoArray="";
-    for(var i=1; i<args.length; i++){
-        if(i==(args.length-1)){
-            novoArray+=args[i];
-        }else{
-        novoArray+=args[i]+" ";}
-    }
-    console.log(novoArray+"x");
-    var urlArray=novoArray.split("-");
-    var cidade=urlArray[0].split(" ");
-  
-    estado=urlArray[1];
-    var altoEstado=estado.toUpperCase();
-    //console.log(cidade+" "+altoEstado+" x");
-    var cidadeUrl="";
-    for(var i=0; i<cidade.length; i++){
-        if(i==(cidade.length-1)){
-            cidadeUrl+=cidade[i];
-        }else{
-            cidadeUrl+=cidade[i]+"+";}
-    }*/
-    
-
+   
     
 
     var est=args[1].toUpperCase();
@@ -56,46 +29,9 @@ const main = async (msg, args) => {
     const content = await fetchData(url);
     
     const $ = cheerio.load(content)
-
-/*
-    const totalGlobo = $('#main_table_countries_today > tbody.total_row_body > tr > td:nth-child(2)').text();
-    const totalMortes = $('#main_table_countries_today > tbody.total_row_body > tr > td:nth-child(4)').text();
-    // const text2 = $('#tv-covid-page > div > header > div > div.mainChartBlock-3VyQGT5m > div.info-c0IPPK6E > div > div:nth-child(3) > span.deathsCount-2idx61EX.statCount-114jYdmn').text();
-    const totalNovosCasosHoje = $('#main_table_countries_today > tbody.total_row_body > tr > td:nth-child(3)').text();
-    const totalMortesHoje = $('#main_table_countries_today > tbody.total_row_body > tr > td:nth-child(5)').text();
-    const totalcasosRecuperados = $('#main_table_countries_today > tbody.total_row_body > tr > td:nth-child(6)').text();
-    const totalAtivos = $('#main_table_countries_today > tbody.total_row_body > tr > td:nth-child(7)').text();
-  
-    */
-   const nomeCidade2=$('#covid19 > tbody > tr > td:nth-child(2)').html();
-   //console.log(nomeCidade2 + " html");
-    const nomeCidade=$('#covid19 > tbody > tr > td:nth-child(3)').text();
     const totalCasos=$('#covid19 > tbody > tr > td:nth-child(5)').text();
     var totalMortes= $('#covid19 > tbody > tr > td:nth-child(6)').text();
-   
-   // console.log(totalMortes+ " 1");
-    /*s = t.replace(/[\n]+/g, '');
-    var arrayDados=t.split(" ");
-    const filtrado = arrayDados.filter(x => x.trim().length > 0);
-  
-    console.log(filtrado);  // [5,6]*/
-    //console.log(arrayDados);
-
-    // console.log(text1 +"\n \n"+text2+'\n\n'+text3+'\n\n'+text4+ "\n \n Leia a matéria completa no link: " + url);
-  // console.log(text1 + "\nxxx"+text2);
-    
-  
-   // msg.author.send(text1);
-   /* 
-    got(url).then(response => {
-        const dom = new JSDOM(response.body);
-        dom.window.document.querySelectorAll('#maincounter-wrap > div > span').forEach(link => {
-            console.log(link.href+"kkk");
-          });
-    }).catch(err => {
-        console.log(err);
-    });*/
-   
+        
     const Discord = require('discord.js');
     if(totalMortes==""){
         msg.channel.send("A sua busca falhou, verifique se digitou a sigla do estado da maneira correta!\n```!estado-covid19 <sigla do estado>``````Exemplo: !estado-covid19 rj```")

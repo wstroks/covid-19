@@ -1,15 +1,6 @@
-const request = require('request-promise');
-const cheerio = require('cheerio');
-const axios = require('axios');
-const fs = require("fs");
-const got = require('got');
-
-const Discord = require('discord.js');
-
 module.exports = async (client, msg, args) => {
 
-
-  
+    const Discord = require('discord.js');
 
     // inside a command, event listener, etc.
     var exampleEmbed = new Discord.MessageEmbed()
@@ -27,14 +18,10 @@ module.exports = async (client, msg, args) => {
             { name: '5', value: "Pessoas doentes devem adiar ou evitar viajar para as áreas afetadas por coronavírus. Áreas afetadas são países, áreas, províncias ou cidades onde há transmissão contínua -- não áreas com apenas casos importados." },
             { name: '6', value: "Fique em casa se não se sentir bem. Se você tiver febre, tosse e dificuldade em respirar, procure atendimento médico. Siga as instruções da sua autoridade sanitária nacional ou local, porque elas sempre terão as informações mais atualizadas sobre a situação em sua área." },
             { name: '7', value: "Os viajantes que retornam das áreas afetadas devem monitorar seus sintomas por 14 dias e seguir os protocolos nacionais dos países receptores; e se ocorrerem sintomas, devem entrar em contato com um médico e informar sobre o histórico de viagem e os sintomas." },
-
-            
-
-           
+                      
         )
         .setTimestamp()
         .setFooter('Clique no titulo e veja mais informações sobre', '');
-
 
     msg.author.send(exampleEmbed);
 

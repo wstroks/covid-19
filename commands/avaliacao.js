@@ -1,8 +1,7 @@
 module.exports = async (client, msg, args, database) => {
     const Discord = require("discord.js");
     var textoMsg = "";
-
-    //console.log("a " + id);
+    
     var comentario = "";
     var avaliacao = "";
     var alarme2 = 0;
@@ -30,10 +29,6 @@ module.exports = async (client, msg, args, database) => {
         }
 
     }
-    //console.log("a "+avaliacao+" "+comentario);
-
-    // inHTML("ex-table1","");    
-
     const rooRef = database.ref('feedback');
 
     const autoId = rooRef.push().key;
@@ -44,17 +39,7 @@ module.exports = async (client, msg, args, database) => {
 
     });
 
-
     msg.channel.send(`Obrigado pela avaliação!!`);
-
-
-
-
-
-
-
-
-
 }
 
 

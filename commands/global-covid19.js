@@ -35,26 +35,9 @@ const main = async (msg, args) => {
     const totalcasosRecuperados = $('#main_table_countries_today > tbody.total_row_body > tr > td:nth-child(6)').text();
     const totalAtivos = $('#main_table_countries_today > tbody.total_row_body > tr > td:nth-child(7)').text();
     
-    //console.log(" "+totalGlobo+" "+totalMortes+" "+totalNovosCasosHoje +" "+totalMortesHoje);
-
-    // console.log(text1 +"\n \n"+text2+'\n\n'+text3+'\n\n'+text4+ "\n \n Leia a matéria completa no link: " + url);
-  // console.log(text1 + "\nxxx"+text2);
-
-  
-   // msg.author.send(text1);
-   /* 
-    got(url).then(response => {
-        const dom = new JSDOM(response.body);
-        dom.window.document.querySelectorAll('#maincounter-wrap > div > span').forEach(link => {
-            console.log(link.href+"kkk");
-          });
-    }).catch(err => {
-        console.log(err);
-    });*/
 
     const Discord = require('discord.js');
-
-    // inside a command, event listener, etc.
+ 
     var exampleEmbed = new Discord.MessageEmbed()
         .setColor('#0099ff')
         .setTitle("Dados Globais do Covid-19")
@@ -77,7 +60,6 @@ const main = async (msg, args) => {
 
 
     msg.author.send(exampleEmbed);
-
 
 
 }
