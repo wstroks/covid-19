@@ -96,7 +96,7 @@ const server = app.listen(port, function () {
     console.log('Online server at: '+port);
     wakeUpDyno(DYNO_URL);
 });
-
+/*
 app.get('/', function(req, res) {
     res.send('{"covid-19":{"status":"online"}}');
-  });
+  });*/
