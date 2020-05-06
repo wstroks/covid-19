@@ -4,6 +4,7 @@
 
 * Após criar o arquivo verifica cidade-covid19.js, lá vc verá que module receberá três parâmetros args que será o que vc digita <Ex !teste agora, "args={agora}";
 * Já os outros parâmetros client e msg será pra enviar mensagens no discord;
+* Quando subir uma nova atualização e foi completa, me avise que jogo ela pro servidor (pagotto);
 
 Qualquer coisa só me chamar no próprio discord do covid-19 que tento ajudar!!
 
