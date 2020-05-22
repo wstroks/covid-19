@@ -32,17 +32,20 @@ const main = async (msg, args) => {
     var arrayDados=[];
     for(var i=0; i<40; i++){
         var t=$(`#main_table_countries_today > tbody:nth-child(2) > tr:nth-child(${i})`).text();
+        console.log(t+"x");
         arrayDadosN=[];
         arrayDadosN=t.split("\n");
+        console.log(arrayDadosN+"yy");
         
-            if(arrayDadosN[1]=="Brazil"){
+            if(arrayDadosN[2]=="Brazil"){
                 contador=i;
-                arrayDados=t.split("\n");
+                arrayDados=arrayDadosN;
+                //console.log(arrayDados);
             }
           
 
     }
-    console.log(arrayDados);
+    console.log(arrayDados+"oo");
        
     const Discord = require('discord.js');
 
@@ -56,12 +59,12 @@ const main = async (msg, args) => {
         .setThumbnail('https://www.gstatic.com/onebox/sports/logos/flags/brazil_icon_square.png')
         .addFields(
            // { name: 'Comentário de Paciente', value: text5 },
-            { name: 'Total de Casos', value: arrayDados[2], inline: true },
-            { name: 'Total de Mortes', value: arrayDados[4], inline: true },
-            { name: 'Total de Novos Hoje', value: arrayDados[3], inline: true },
-            { name: 'Total de Casos Ativos', value: arrayDados[7], inline: true },
-            { name: 'Total de Casos Recuperados', value: arrayDados[6], inline: true },
-            { name: 'Total de Mortes Hoje', value:arrayDados[5], inline: true },
+            { name: 'Total de Casos', value: arrayDados[3], inline: true },
+            { name: 'Total de Mortes', value: arrayDados[5], inline: true },
+            { name: 'Total de Novos Hoje', value: arrayDados[4], inline: true },
+            { name: 'Total de Casos Ativos', value: arrayDados[8], inline: true },
+            { name: 'Total de Casos Recuperados', value: arrayDados[7], inline: true },
+            { name: 'Total de Mortes Hoje', value:arrayDados[6], inline: true },
 
            
         )

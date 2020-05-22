@@ -27,13 +27,13 @@ const main = async (msg, args) => {
     const $ = cheerio.load(content)
 
 
-    const totalGlobo = $('#main_table_countries_today > tbody.total_row_body > tr > td:nth-child(2)').text();
-    const totalMortes = $('#main_table_countries_today > tbody.total_row_body > tr > td:nth-child(4)').text();
+    const totalGlobo = $('#main_table_countries_today > tbody.total_row_body > tr > td:nth-child(3)').text();
+    const totalMortes = $('#main_table_countries_today > tbody.total_row_body > tr > td:nth-child(5)').text();
     // const text2 = $('#tv-covid-page > div > header > div > div.mainChartBlock-3VyQGT5m > div.info-c0IPPK6E > div > div:nth-child(3) > span.deathsCount-2idx61EX.statCount-114jYdmn').text();
-    const totalNovosCasosHoje = $('#main_table_countries_today > tbody.total_row_body > tr > td:nth-child(3)').text();
-    const totalMortesHoje = $('#main_table_countries_today > tbody.total_row_body > tr > td:nth-child(5)').text();
-    const totalcasosRecuperados = $('#main_table_countries_today > tbody.total_row_body > tr > td:nth-child(6)').text();
-    const totalAtivos = $('#main_table_countries_today > tbody.total_row_body > tr > td:nth-child(7)').text();
+    const totalNovosCasosHoje = $('#main_table_countries_today > tbody.total_row_body > tr > td:nth-child(4)').text();
+    const totalMortesHoje = $('#main_table_countries_today > tbody.total_row_body > tr > td:nth-child(6)').text();
+    const totalcasosRecuperados = $('#main_table_countries_today > tbody.total_row_body > tr > td:nth-child(7)').text();
+    const totalAtivos = $('#main_table_countries_today > tbody.total_row_body > tr > td:nth-child(8)').text();
     
 
     const Discord = require('discord.js');
