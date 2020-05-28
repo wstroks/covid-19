@@ -1,0 +1,11 @@
+{
+    "prefix":"!",
+    "token": "dasdasd",
+    "avisosChannelId": "asdasdsa",
+    "boasVindasChannelId": "asdasd",
+
+    "permissions": {
+        "!clear": "ADMINISTRATOR",
+        "!aviso": "ADMINISTRATOR"
+    }
+}
